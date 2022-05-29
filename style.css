@@ -1,0 +1,123 @@
+@font-face {
+    font-family: Death;
+    src: url(Death.ttf);
+}
+
+body {
+    background-color: #101110;
+}
+
+.header {
+    color: white;
+    font-family: Death;
+    text-align: center;
+    margin-top: 47px;
+    margin: auto;
+    font-size: 25px;
+}
+
+p {
+    font-family:Death;
+    font-size: 27px;
+    color: white;
+}
+
+
+.num,
+.msg,
+.key {
+  font-size: 25px;
+  background-color: #1f1f21;
+  width: 75%;
+  padding: 20px;
+  border: 2px solid #000000c9;
+  border-radius: 25px;
+  color: white;
+}
+
+.btn {
+    width: 35%;
+    font-size: 25px;
+    margin-top: 25px;
+    padding: 17px;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    font-family: Death;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 25px;
+}
+  
+.btn:hover {
+    transform: rotate(2deg);
+    background: rgb(201, 201, 201);
+}
+
+#overlay-toggle {
+    position:absolute;
+    display: none;
+}
+
+.overlay {
+    z-index: 1;
+    background-color: black;
+  }
+  .overlay label {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vw;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+}
+
+.no-hover {
+    display: block;
+}
+
+  .hover {
+    display: none;
+}
+
+.fullscreen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+
+#overlay-toggle:checked ~ .overlay {
+    animation-fill-mode: forwards;
+    animation-name: fade, hide;
+    animation-delay: 0s, 600ms;
+    animation-duration: 600ms, 1ms;
+  }
+  #overlay-toggle:checked ~ .overlay label {
+    animation-fill-mode: forwards;
+    animation-name: fade;
+    animation-delay: 0s;
+    animation-duration: 500ms;
+  }
+  @media(hover: hover) {
+    .hover {
+      display: block;
+    }
+    .no-hover {
+      display: none;
+    }
+  }
+  @keyframes fade{
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes hide {
+    to {
+      visibility: hidden;
+    }
+  }
