@@ -9,7 +9,7 @@ function send() {
   body: JSON.stringify({
     phone: `"${num}"`,
     message: `"${msg}"`,
-    key: `"${key}"`,
+    key: test,
   }),
 }).then(response => {
   return response.json();
