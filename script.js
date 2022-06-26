@@ -1,6 +1,6 @@
 const num = document.getElementById("num")
 const msg = document.getElementById("msg")
-const key = document.getElementById("key")
+const test = document.getElementById("key")
 
 function send() {
     fetch('https://textbelt.com/text', {
