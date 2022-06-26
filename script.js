@@ -7,8 +7,8 @@ function send() {
   method: 'post',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
-    phone: `"${num}"`,
-    message: `"${msg}"`,
+    phone: "639321023284",
+    message: "test",
     key: test,
   }),
 }).then(response => {
